@@ -34,13 +34,13 @@ public class PostRepositoryTest {
                 .build());
 
         //when
-        //List<Posts> postsList = postRepository.findAll();
+        List<Posts> postsList = postRepository.findAll();
 
         //then
 
-//        Posts posts = postsList.get(0);
-//        Assertions.assertThat(posts.getTitle()).isEqualTo(title);
-//        Assertions.assertThat(posts.getContent()).isEqualTo(content);
+        Posts posts = postsList.get(0);
+        Assertions.assertThat(posts.getTitle()).isEqualTo(title);
+        Assertions.assertThat(posts.getContent()).isEqualTo(content);
         Assertions.assertThat(saved.getTitle()).isEqualTo(title);
 
 
